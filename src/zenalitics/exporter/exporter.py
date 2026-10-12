@@ -1,8 +1,9 @@
-from dataclasses import dataclass
 from http import HTTPStatus
 from typing import Final
 
 import requests
+
+from ..schemas.user_credentials import UserCredentials
 
 REQUEST_TIMEOUT: Final[int] = 60
 BASE_URL: Final[str]        = "https://zenmoney.ru"
@@ -15,13 +16,6 @@ class LoginException(Exception):
     pass
 class FetchException(Exception):
     pass
-class ArgumentException(Exception):
-    pass
-
-@dataclass()
-class UserCredentials:
-    login: str
-    password: str
 
 def _login(creds: UserCredentials, session: requests.Session) -> None:
     data = {
