@@ -1,0 +1,27 @@
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 20px;
+}
+
+.value {
+  margin: 0;
+  color: var(--z-ink);
+  font-size: clamp(40px, 6vw, 56px);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  font-variant-numeric: proportional-nums;
+}
+
+.dimmed {
+  opacity: 0.45;
+}
+
+.failed {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--z-muted);
+}

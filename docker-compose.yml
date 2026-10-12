@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    # Порт наружу не публикуется: к бэку ходит только nginx фронта.
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_CONCURRENCY: "1"
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"

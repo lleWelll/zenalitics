@@ -1,0 +1,110 @@
+.page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  background: var(--z-paper);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  border-radius: 14px;
+  background: var(--z-surface);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--z-ink);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.lead {
+  margin: 8px 0 0;
+  color: var(--z-ink-2);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.steps {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--z-muted);
+  font-size: 14px;
+}
+
+.steps li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepActive {
+  color: var(--z-ink);
+}
+
+.stepDone {
+  color: var(--z-ink-2);
+}
+
+.dot {
+  width: 16px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.dot::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--z-axis);
+}
+
+.seconds {
+  margin-left: auto;
+  color: var(--z-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.note {
+  margin: 0;
+  color: var(--z-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}

@@ -16,4 +16,10 @@ wheels/
 *.env
 
 # Other
+docs/
 todo.md
+
+# Frontend
+node_modules/
+frontend/dist/
+frontend/dev-data/

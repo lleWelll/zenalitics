@@ -1,0 +1,25 @@
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--z-paper);
+  color: var(--z-ink);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'calt' 1;
+}
+
+::selection {
+  background: var(--z-ink);
+  color: var(--z-paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

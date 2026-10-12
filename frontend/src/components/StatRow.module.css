@@ -1,0 +1,49 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 48px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+.clickable {
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.clickable:hover .value {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.clickable:focus-visible {
+  outline: 2px solid var(--z-ink);
+  outline-offset: 4px;
+}
+
+.label {
+  color: var(--z-muted);
+  font-size: 14px;
+}
+
+.value {
+  color: var(--z-ink);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.hint {
+  color: var(--z-ink-2);
+  font-size: 12px;
+}

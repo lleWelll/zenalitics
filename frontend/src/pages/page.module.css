@@ -1,0 +1,65 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.span12 {
+  grid-column: span 12;
+}
+
+.span7 {
+  grid-column: span 7;
+}
+
+.span6 {
+  grid-column: span 6;
+}
+
+.span5 {
+  grid-column: span 5;
+}
+
+.span4 {
+  grid-column: span 4;
+}
+
+@media (max-width: 1100px) {
+  .span7,
+  .span6,
+  .span5 {
+    grid-column: span 12;
+  }
+
+  .span4 {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 720px) {
+  .grid {
+    gap: 16px;
+  }
+
+  .span4 {
+    grid-column: span 12;
+  }
+}
+
+.ring {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
